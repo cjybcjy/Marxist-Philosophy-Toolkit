@@ -1,0 +1,4 @@
+interface:
+  display_name: "马哲分析工具箱"
+  short_description: "Marxist analysis for practical real-world problems"
+  default_prompt: "Use $marxist-analysis to identify the main contradiction and turn this real problem into a practice-tested action plan."
