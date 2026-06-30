@@ -1,6 +1,6 @@
 ---
 name: marxist-analysis
-description: Use when the user asks for Marxist or Marxism-based analysis of real problems, industries, companies, policy, organization, class, state, contradiction, development stage, reform, mass line, sinicization, or practice-tested action plans. Trigger on Chinese prompts such as 马哲, 马克思主义分析, 实事求是, 邓论, 辩证分析, 批判思维, 主要矛盾, and 实践检验. Do not use for generic political roleplay, slogan writing, or historical trivia unless the user asks to analyze the trivia through Marxist method.
+description: Use when the user asks for Marxist or Marxism-based analysis of real problems, industries, companies, policy, organization, class, state, contradiction, development stage, reform, mass line, sinicization, or practice-tested action plans. Trigger on Chinese prompts such as 马哲, 马克思主义分析, 毛主席, 毛泽东, 毛选, 教员, 实事求是, 邓论, 辩证分析, 批判思维, 主要矛盾, and 实践检验. Do not use for generic political roleplay, slogan writing, or historical trivia unless the user asks to analyze the trivia through Marxist method.
 ---
 
 # Marxist Analysis
@@ -93,6 +93,8 @@ For real-world problems, build the answer in this order:
 10. Practice test: smallest action, start/process/result metrics, review point, revision rule.
 
 ### Step 4: Output
+
+Use plain language as the main surface, but keep a small amount of Marxist terminology as the analytical skeleton. For real-world answers, use about 2 to 4 terms such as `主要矛盾`, `阶段判断`, `利益结构`, `生产关系`, or `实践检验`. Explain each term in plain language the first time it appears. Do not require the user to know the terms before asking.
 
 Prefer this shape when the user wants analysis:
 
