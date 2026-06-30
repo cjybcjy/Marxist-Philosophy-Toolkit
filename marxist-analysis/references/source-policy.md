@@ -28,7 +28,7 @@ Exclude:
 - later party, academic, or commentator interpretations unless the answer explicitly asks for later interpretation;
 - book-search metadata, covers, catalog blurbs, and table-of-contents snippets as evidence.
 
-External book-search sites can help identify candidate titles or editions, but a search result is only a bibliographic hint. Do not treat it as `primary-text`.
+External book-search sites can help identify candidate titles or editions, but a search result is only a bibliographic hint. Do not treat it as `primary-text`. Load `source-acquisition-integrity.md` before adding any text discovered through online book search.
 
 ## Framework Synthesis Rule
 
@@ -73,6 +73,10 @@ Use these labels when grounding an answer:
 | `later-interpretation` | A scholar, party document, commentator, or later tradition interpreting the text |
 | `inference` | The agent's own application of a method to the user's problem |
 | `current-fact` | A fact about today's market, law, company, person, or policy that may change |
+| `bibliographic-hint` | Search result or catalog clue used only to find a candidate edition |
+| `candidate-text` | Text found but not yet verified |
+| `verified-edition` | Edition and anchor passages checked against reliable sources |
+| `suspect-text` | Text with unresolved edition, OCR, missing-page, or alteration risk |
 
 Never present `inference` as if it were `primary-text`.
 
@@ -85,6 +89,8 @@ When the user asks for source grounding, method granularity, or whether a figure
 3. Identify whether the needed support is `primary-text`, `historical-context`, `later-interpretation`, or `inference`.
 4. If only secondary material is available, say the author-only source is missing.
 5. If using a case analogy, load `cases/figure-case-calibration.md` and name both the shared mechanism and the different conditions.
+
+When the user asks to supplement books, search online, or use a file from an uncertain source, load `source-acquisition-integrity.md` before this protocol.
 
 ## Citation Use
 

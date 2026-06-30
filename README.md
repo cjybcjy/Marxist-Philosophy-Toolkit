@@ -121,6 +121,7 @@ marxist-analysis/
     ├── constraint-map.md
     ├── risk-and-inversion.md
     ├── source-policy.md
+    ├── source-acquisition-integrity.md
     ├── source-map.md
     ├── source-coverage.md
     ├── source-index/
@@ -269,6 +270,41 @@ current-fact：负责现代问题的事实判断
 新增的一条硬规则是：人物来源索引只收本人著作、讲话、报告、书信、谈话、文集中的原文。传记、导读、教材、商业化解读、网络摘要只能作为二手解释或历史线索，不能当作人物本人观点。书库或搜索网站只能用来发现候选书名，不能把搜索结果本身当成证据。
 
 同时，教材和系统化理论课程可以作为 `framework-synthesis` 使用：它们负责帮 Skill 建目录、分层和标准化模板，但不能当作人物本人原文。
+
+### `source-acquisition-integrity.md`
+
+资料获取与防篡改校对协议。用于补充书籍、从网上搜索版本、检查 PDF/OCR/电子书是否可靠。
+
+核心原则：
+
+```text
+广泛搜索，窄口入库，先校对再使用。
+```
+
+它把来源分成几层：
+
+| 层级 | 例子 | 用法 |
+| --- | --- | --- |
+| T0 | 用户本地扫描/PDF，有清楚版权页和版次页 | 候选文本，需要校验 |
+| T1 | 官方出版社、权威文集页、理论门户 | 版本和文本优先依据 |
+| T2 | 公共档案、图书馆目录、可靠文本档案 | 交叉校对 |
+| T3 | 学术引用、ISBN 数据、馆藏记录 | 书目信息确认 |
+| T4 | Z-Library、镜像站、随机 OCR、文件分享页 | 只能发现候选书名，不能当证据 |
+
+任何候选文本入库前都要记录：
+
+```text
+书名、作者、译者/编者、版次、出版社、年份、ISBN、来源 URL/本地路径、
+访问日期、来源层级、文件 hash、状态、校对理由。
+```
+
+状态只能是：
+
+```text
+candidate / verified / partial / suspect / rejected
+```
+
+如果版本页缺失、目录顺序异常、关键段落与可靠版本不一致、OCR 改坏概念或否定词、出现时代错位的插入语，就不能进入 `source-index/`。
 
 ### `source-map.md`
 

@@ -18,21 +18,21 @@ For each case, use:
 
 ## Compact Case Map
 
-| Figure | Case | Calibrates | Use with | Boundary |
-| --- | --- | --- | --- | --- |
-| Marx/Engels | Paris Commune | State machine and political form | State, institution, organization questions | Do not equate all local autonomy with commune politics |
-| Marx/Engels | Gotha Programme dispute | Transition conditions and program limits | Policy/program debates | Do not treat program formulas as reality |
-| Marx/Engels | Machinery and factory system | Technology under capital command | Automation, platform, AI, labor process | Do not call all technology progressive without relation analysis |
-| Lenin | April Theses route shift | Stage change and route correction | Fast-moving political/organizational crisis | Do not reward impatience when facts have not changed |
-| Lenin | NEP | Tactical retreat and recovery under constraint | Reform, market concession, capacity recovery | Do not call every market tool NEP |
-| Lenin | Anti-bureaucracy late writings | Apparatus quality and state capacity | Governance and organization scale problems | Do not solve bureaucracy by slogans about discipline |
-| Mao | Jinggangshan base area | Weak-side survival and small base area | Startup, learning, movement-building, personal practice | Do not romanticize isolation or weakness |
-| Mao | `On Protracted War` | Stage analysis over time | Long competitive or strategic struggles | Do not delay when the material trend is worsening |
-| Mao | Yan'an rectification | Correcting style through investigation and practice | Team learning, ideology, organization discipline | Do not convert rectification into blame culture |
-| Mao | Ten Major Relationships | Socialist construction tradeoffs | Development balancing and non-antagonistic contradictions | Do not reduce construction to one master contradiction |
-| Deng | 1978 route reset | Practice standard and ideological blockage | Reform decision, institutional restart | Do not replace principle with short-term result |
-| Deng | Special economic zones | Bounded pilot and feedback expansion | Policy trial, business experiment, organizational reform | Do not ignore distribution and dependency effects |
-| Deng | Southern Talks | Reform restart under hesitation | Route confidence and stage urgency | Do not treat market mechanism as automatically socialist |
+| Figure | Case | Source anchor | Calibrates | Can transfer | Do not transfer |
+| --- | --- | --- | --- | --- | --- |
+| Marx/Engels | Paris Commune | `The Civil War in France` | State machine and political form | Ask what administrative/coercive form reproduces power | Do not equate all local autonomy with commune politics |
+| Marx/Engels | Gotha Programme dispute | `Critique of the Gotha Programme` | Transition conditions and program limits | Test program slogans against material transition conditions | Do not treat program formulas as reality |
+| Marx/Engels | Machinery and factory system | `Capital` Vol. I | Technology under capital command | Analyze labor process, control, and surplus capture around technology | Do not call all technology progressive without relation analysis |
+| Lenin | April route shift | `The Tasks of the Proletariat in the Present Revolution` / April Theses | Stage change and route correction | Reassess route when stage and balance of forces actually change | Do not reward impatience when facts have not changed |
+| Lenin | NEP | `The Tax in Kind`; NEP texts | Tactical retreat and recovery under constraint | Use concession/pilot logic when material recovery and control problems are named | Do not call every market tool NEP |
+| Lenin | Anti-bureaucracy late writings | `Better Fewer, But Better` | Apparatus quality and state capacity | Improve capacity by narrowing scope and raising quality | Do not solve bureaucracy by slogans about discipline |
+| Mao | Jinggangshan base area | `Why Is It That Red Political Power Can Exist in China?`; `A Single Spark Can Start a Prairie Fire` | Weak-side survival and small base area | Find a small field where conditions allow survival, evidence, and expansion | Do not romanticize isolation or weakness |
+| Mao | Protracted war | `On Protracted War` | Stage analysis over time | Track how time, resources, legitimacy, and organization change the balance | Do not delay when the material trend is worsening |
+| Mao | Yan'an rectification | `Reform Our Study`; `Preface and Postscript to Rural Surveys`; `Rectify the Party's Style of Work` | Correcting style through investigation and practice | Link learning, investigation, history, and organizational correction | Do not convert rectification into blame culture |
+| Mao | Ten Major Relationships | `On the Ten Major Relationships` | Socialist construction tradeoffs | Balance development contradictions instead of maximizing one variable | Do not reduce construction to one master contradiction |
+| Deng | 1978 route reset | `Emancipate the Mind, Seek Truth from Facts and Unite as One in Looking to the Future` | Practice standard and ideological blockage | Use practice to break formulaic deadlock and reopen route choice | Do not replace principle with short-term result |
+| Deng | Special economic zones | Special economic zone and opening-up texts in `Selected Works of Deng Xiaoping` | Bounded pilot and feedback expansion | Run controlled institutional experiments with expansion criteria | Do not ignore distribution and dependency effects |
+| Deng | Southern Talks | `Excerpts from Talks Given in Wuchang, Shenzhen, Zhuhai and Shanghai` / Southern Talks | Reform restart under hesitation | Separate means from ends and test route under stage constraints | Do not treat market mechanism as automatically socialist |
 
 ## Output Pattern
 

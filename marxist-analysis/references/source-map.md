@@ -35,7 +35,7 @@ Use these when a figure module needs more than a compact anchor list:
 | Practice loop | Mao's practice and investigation writings | Turn theory into investigation, action, feedback, revision | `protocols/personal-practice.md` |
 | Mass line | Mao on leadership methods and investigation | Convert scattered experience into a usable line and return it for testing | `themes/mass-line.md` |
 | Development stage | Deng on primary stage, productivity, practice standard | Judge what can be done now under actual constraints | `themes/reform-development.md` |
-| Reform and opening | Deng and later development debates | Treat reform as a staged experiment that creates new contradictions | `themes/reform-development.md` |
+| Reform and opening | Deng's reform, opening, productivity, pilot-zone, and Southern Talks source clusters | Treat reform as a staged experiment that creates new contradictions | `themes/reform-development.md` |
 | Sinicization | Mao and Deng on combining universal theory with concrete conditions | Test continuity by method, not identical wording | `themes/sinicization.md` |
 
 ## Source Anchors

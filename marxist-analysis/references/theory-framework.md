@@ -23,6 +23,22 @@ Treat official or authoritative basic-principles textbooks as `framework-synthes
 
 If a textbook classification conflicts with primary texts or a real scenario, load `arbitration.md` and state the tension.
 
+## Baseline Framework Candidate
+
+Current recommended baseline candidate:
+
+```text
+Title: 马克思主义基本原理
+Edition: 2023年版
+Publisher: 高等教育出版社
+ISBN: 978-7-04-059900-8
+Status: framework-synthesis candidate
+Use: taxonomy, teaching order, common concept distinctions
+Do not use for: proof that a figure personally made a claim
+```
+
+Before using any downloaded or OCR copy of this textbook, load `source-acquisition-integrity.md` and verify edition metadata, table of contents, and anchor passages against publisher/catalog records.
+
 ## Four-Part Framework
 
 Use this as the first-pass map for concept organization:

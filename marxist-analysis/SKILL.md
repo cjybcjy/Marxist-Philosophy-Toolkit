@@ -42,6 +42,7 @@ Classify the request:
 | Conflict | Asks why one route differs from another, or whether a theory was betrayed | Load `references/scenario-checkpoints.md` and `references/arbitration.md` |
 | Source check | Asks "where does this come from" or asks for original texts | Load `references/source-policy.md`, `references/source-map.md`, and the relevant source-index file |
 | Source coverage | Says answers repeat the same texts, arguments, slogans, or examples; asks whether the skill has enough source material | Load `references/source-coverage.md`, `references/source-map.md`, `references/source-policy.md`, and the relevant source index |
+| Source acquisition | Asks to supplement books, search online for materials, choose editions, use Z-Library/book-search sites, or guard against altered/tampered texts | Load `references/source-acquisition-integrity.md`, `references/source-policy.md`, and affected source-index or framework files |
 | Theory framework | Asks whether the skill needs textbooks, basic-principles frameworks, theory system, concept taxonomy, or standardized analysis templates | Load `references/theory-framework.md`, `references/method-templates.md`, `references/source-policy.md`, then affected themes |
 | Prior-art reuse | Asks to borrow from another skill, repo, framework, SkillOpt, Darwin, Nuwa, X Mentor, or says not to reinvent the wheel | Load `references/prior-art-scan.md`, `references/source-policy.md`, then `references/evolution-protocol.md` if editing this skill |
 | Skill evolution | Asks to improve, test, score, evolve, debug, or extend this skill | Load `references/evolution-protocol.md`, `references/prior-art-scan.md` when new mechanisms or external methods are involved, `references/evaluation-rubric.md`, `references/coverage-matrix.md`, and affected scenarios |
@@ -61,17 +62,18 @@ Use progressive disclosure:
 7. Add `references/source-map.md` when the user wants original-text grounding.
 8. Add the relevant source-index file when the answer needs author-only source grounding, method granularity, or case calibration for a specific figure.
 9. Add `references/source-coverage.md` when the answer may be reusing the same source anchors, the user flags repeated arguments, or a figure module is stretched beyond its corpus.
-10. Add `references/cases/figure-case-calibration.md` when a historical case is used to calibrate a modern application.
-11. Add `references/prior-art-scan.md` before designing a new workflow, evaluator, automation loop, or module based on external skills or frameworks.
-12. Add `references/fallbacks.md` when facts are missing, the main contradiction is unclear, or the answer is drifting into slogans, roleplay, or overconfidence.
-13. Add `references/practice-cards.md` when the user needs a concrete action, experiment, investigation, or review loop.
-14. Add `references/constraint-map.md` before route choice when the problem is constrained by material conditions, ownership, organization, information flow, incentives, or ideology.
-15. Add `references/risk-and-inversion.md` before recommending actions with meaningful downside, irreversibility, or consequences for others.
-16. Add `references/concept-debugging.md` when a concept might become a label rather than an operational tool.
-17. Add `references/practice-metrics.md` whenever a practice test, experiment, or review loop is proposed.
-18. Add `references/evaluation-rubric.md` when scoring outputs, forward-testing the skill, or deciding whether a response passed.
-19. Add `references/evolution-protocol.md` before editing this skill based on a failure, recurring weakness, or new use case.
-20. Add `references/coverage-matrix.md` when deciding whether existing scenarios cover a failure mode or a new scenario is needed.
+10. Add `references/source-acquisition-integrity.md` before adding book materials, relying on online book-search results, or using any text that may be altered, incomplete, OCR-damaged, or from an uncertain edition.
+11. Add `references/cases/figure-case-calibration.md` when a historical case is used to calibrate a modern application.
+12. Add `references/prior-art-scan.md` before designing a new workflow, evaluator, automation loop, or module based on external skills or frameworks.
+13. Add `references/fallbacks.md` when facts are missing, the main contradiction is unclear, or the answer is drifting into slogans, roleplay, or overconfidence.
+14. Add `references/practice-cards.md` when the user needs a concrete action, experiment, investigation, or review loop.
+15. Add `references/constraint-map.md` before route choice when the problem is constrained by material conditions, ownership, organization, information flow, incentives, or ideology.
+16. Add `references/risk-and-inversion.md` before recommending actions with meaningful downside, irreversibility, or consequences for others.
+17. Add `references/concept-debugging.md` when a concept might become a label rather than an operational tool.
+18. Add `references/practice-metrics.md` whenever a practice test, experiment, or review loop is proposed.
+19. Add `references/evaluation-rubric.md` when scoring outputs, forward-testing the skill, or deciding whether a response passed.
+20. Add `references/evolution-protocol.md` before editing this skill based on a failure, recurring weakness, or new use case.
+21. Add `references/coverage-matrix.md` when deciding whether existing scenarios cover a failure mode or a new scenario is needed.
 
 Default MVP routing:
 
@@ -196,6 +198,7 @@ Before answering, check:
 | Treats all historical stages as the same | Load `references/arbitration.md` and state condition differences |
 | Quotes without method | Replace quote pile with concept, source, use, and boundary |
 | Uses secondary commentary as if it were an author's own work | Load `references/source-policy.md` and the relevant source index; downgrade commentary to later interpretation |
+| Online book file or OCR text treated as trustworthy by default | Load `references/source-acquisition-integrity.md`; mark it candidate/suspect until edition and anchor passages are checked |
 | Starts answering before the scenario is clear | Load `references/scenario-checkpoints.md`; run the shared gate and chosen scenario gate |
 | Forces one main contradiction without evidence | Load `references/fallbacks.md`; list candidates and what evidence would decide |
 | Action answer stays vague | Load `references/practice-cards.md`; fill one card |
@@ -219,6 +222,7 @@ Core coordination:
 - `references/method-templates.md`: standardize contradiction, practice, historical-materialist, and development-trend analysis procedures.
 - `references/arbitration.md`: resolve tensions between routes and historical stages.
 - `references/source-policy.md`: decide what counts as reliable evidence.
+- `references/source-acquisition-integrity.md`: search, select, verify, and reject book materials before adding them to source indexes.
 - `references/source-map.md`: map methods to source texts.
 - `references/source-coverage.md`: prevent repeated source anchors and expose source gaps before overextending a figure module.
 - `references/cases/figure-case-calibration.md`: use historical cases to calibrate modern applications without treating analogy as proof.

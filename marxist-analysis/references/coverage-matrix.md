@@ -16,6 +16,7 @@ Use `evaluation-scenarios.md` to test behavior, `evaluation-rubric.md` to score 
 | --- | --- | --- | --- | --- |
 | Scenario gating | 11. Scenario Checkpoint Gate | `scenario-checkpoints.md`, `dispatcher.md`, `fallbacks.md` | Answering before object, facts, and expected output are clear | Automated gate tracing |
 | Theory framework and method templates | 14. Framework Synthesis And Method Templates | `theory-framework.md`, `method-templates.md`, `source-policy.md`, `concept-debugging.md` | Raw original-text pile, textbook-only answer, no standard procedure, historical conclusion treated as universal method | More template-specific forward tests |
+| Source acquisition and integrity | 15. Source Acquisition Integrity | `source-acquisition-integrity.md`, `source-policy.md`, affected source index/framework | Search result treated as evidence, unverified OCR/text file used as source, edition/tamper risk ignored | Automated checksum/OCR comparison helpers |
 | Industry or company analysis | 1. Industry Analysis | `scenario-checkpoints.md`, `protocols/industry-analysis.md`, `themes/political-economy.md`, `themes/historical-materialism.md`, `constraint-map.md`, `source-policy.md` | Tech-progress slogans, missing value chain, unsupported current facts | Imperialism/global supply chain, finance/asset pricing, platform governance |
 | Personal practice and learning | 2. Personal Practice; 6. Fallback And Practice Cards; 7. Constraint And Risk Gate | `protocols/personal-practice.md`, `practice-cards.md`, `practice-metrics.md`, `risk-and-inversion.md`, `fallbacks.md` | Motivation filler, no small experiment, forced certainty, risky all-in advice | Long-cycle habit review, family/work constraint negotiation |
 | Organization and route conflict | 4. Organization Strategy | `protocols/organization-strategy.md`, `themes/class-state-party.md`, `themes/dialectics-contradiction.md`, `practice-cards.md` | Personality framing, vague discipline advice, no organization experiment | Larger institutions, formal authority, coalition and legitimacy analysis |
@@ -33,6 +34,8 @@ Use `evaluation-scenarios.md` to test behavior, `evaluation-rubric.md` to score 
 | Missing checkpoint gate | Scenario 11 | `scenario-checkpoints.md`, `SKILL.md` | A new scenario family needs its own pre-answer questions |
 | Raw original texts with no system or procedure | Scenario 14 | `theory-framework.md`, `method-templates.md` | A new theory family needs its own template |
 | Textbook framework treated as primary proof | Scenario 14 | `source-policy.md`, `theory-framework.md` | A specific textbook corpus becomes first-class |
+| Online book search result treated as source | Scenario 15 | `source-acquisition-integrity.md`, `source-policy.md` | A new acquisition channel is added |
+| Tampered, incomplete, or OCR-damaged text used without checks | Scenario 15 | `source-acquisition-integrity.md`, affected source index/framework | Repeated source corruption appears in a specific corpus |
 | Figure roleplay or roundtable | Global criteria, scenarios 2 and 9 | `SKILL.md`, `fallbacks.md` | It appears in a new domain not covered by current prompts |
 | Slogan answer | Scenarios 1, 6, 9 | `fallbacks.md`, affected theme/protocol | The slogan comes from a specific new concept or domain |
 | Current-fact hallucination | Scenario 1 | `source-policy.md`, affected protocol | The topic involves policy, law, market data, war, election, or public office |
@@ -64,6 +67,7 @@ Add scenarios before adding large new modules for these areas:
 | More source-index depth | Current source indexes are navigation maps, not full bibliographies or citation databases | Validation |
 | More case families | Current case map covers core figure methods but not finance, platform governance, or later Chinese theory cases | Validation |
 | Textbook framework source selection | The framework layer does not yet name a specific edition or corpus of official textbooks | Validation |
+| Acquisition tooling | Integrity protocol is manual; no script yet hashes files, samples anchors, or records ledgers | Train |
 
 ## Maintenance Rule
 

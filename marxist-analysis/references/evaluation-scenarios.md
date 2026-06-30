@@ -23,7 +23,7 @@ Use these groups to avoid optimizing the skill only against familiar prompts.
 | Group | Scenarios | Use | Rule |
 | --- | --- | --- | --- |
 | Train | 1. Industry Analysis; 2. Personal Practice; 4. Organization Strategy; 6. Fallback And Practice Cards | Diagnose common failures and design bounded patches | Pass criteria may be inspected while designing the edit |
-| Validation | 3. Sinicization Conflict; 7. Constraint And Risk Gate; 8. Concept Debugging; 10. Source Coverage And Argument Reuse; 11. Scenario Checkpoint Gate; 12. Prior-Art Reuse Gate; 13. Author-Only Source And Case Calibration; 14. Framework Synthesis And Method Templates | Check whether a patch generalizes across tension, risk, concept, source-coverage, scenario-gate, prior-art reuse, source-index, and framework-template tasks | Do not change validation criteria in the same iteration |
+| Validation | 3. Sinicization Conflict; 7. Constraint And Risk Gate; 8. Concept Debugging; 10. Source Coverage And Argument Reuse; 11. Scenario Checkpoint Gate; 12. Prior-Art Reuse Gate; 13. Author-Only Source And Case Calibration; 14. Framework Synthesis And Method Templates; 15. Source Acquisition Integrity | Check whether a patch generalizes across tension, risk, concept, source-coverage, scenario-gate, prior-art reuse, source-index, framework-template, and source-integrity tasks | Do not change validation criteria in the same iteration |
 | Holdout | 5. Source Challenge; 9. Skill Evolution | Catch overfitting to user-facing analysis and self-edit workflows | Do not tune directly against these scenarios during the same iteration |
 
 Default iteration pattern:
@@ -54,6 +54,7 @@ Use `coverage-matrix.md` before adding scenarios. The matrix records which probl
 | 12. Prior-Art Reuse Gate | Validation | Reinventing workflow or optimizer without checking mature schemes |
 | 13. Author-Only Source And Case Calibration | Validation | Secondary commentary treated as primary text, false historical analogy |
 | 14. Framework Synthesis And Method Templates | Validation | Raw original-text pile, textbook-only answer, missing standardized method |
+| 15. Source Acquisition Integrity | Validation | Unverified online text, tampered edition, or OCR-damaged source entering the skill |
 
 ## Scenario 1: Industry Analysis
 
@@ -530,6 +531,38 @@ Use `coverage-matrix.md` before adding scenarios. The matrix records which probl
 - Applies historical conclusions directly to AI, platforms, or finance without current facts.
 - Adds later Chinese theory labels without source modules.
 
+## Scenario 15: Source Acquisition Integrity
+
+**User prompt**
+
+```text
+后面如果要补书，可以去网上搜，Z-Library 也能当线索。但有些电子书版本可能被篡改或 OCR 错了。请给我一套入库前的校对规则：什么能当证据，什么只能当候选，怎么判断 suspect/rejected？
+```
+
+**Required route**
+
+- `references/source-acquisition-integrity.md`
+- `references/source-policy.md`
+- Optional: affected `source-index/*.md` or `theory-framework.md`
+
+**Must include**
+
+- Treat online book-search results as `bibliographic-hint`, not `primary-text`.
+- State source tiering from official/publisher/library sources down to shadow-library or random OCR pages.
+- Require acquisition ledger fields: title, author, edition, publisher, year, ISBN, source, access date, tier, hash, status, reason.
+- Require front matter, metadata, table-of-contents, and 3 to 5 anchor-passage checks before use.
+- Name tampering/OCR warning signs.
+- Use statuses: candidate, verified, partial, suspect, rejected.
+- State that copyrighted full text should not be stored in the skill.
+
+**Fail if**
+
+- Says "download and use it" without verification.
+- Treats Z-Library or any search metadata as source authority.
+- Ignores edition, translator/editor, volume, publisher, or ISBN.
+- Lets OCR text directly become a method rule.
+- Stores or proposes storing copyrighted full text in the skill.
+
 ## Global Pass Criteria
 
 Across all scenarios, a passing answer must:
@@ -550,6 +583,7 @@ Across all scenarios, a passing answer must:
 - Use author-only source indexes when grounding figure modules.
 - Calibrate historical cases by shared mechanism and different conditions, not inspiration.
 - Use framework synthesis for taxonomy and templates, while preserving primary texts and current facts as separate evidence layers.
+- Treat online book-search results as candidate metadata until edition and anchor passages are verified.
 
 ## Global Failure Signals
 
@@ -564,3 +598,4 @@ Across all scenarios, a passing answer must:
 - Biography, commentary, textbook, or business reinterpretation presented as the figure's own work.
 - Historical case analogy used as proof without condition differences.
 - Textbook framework presented as sufficient proof or as a substitute for current-fact investigation.
+- Unverified online or OCR text treated as trustworthy source material.

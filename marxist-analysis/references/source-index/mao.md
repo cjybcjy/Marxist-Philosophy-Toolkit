@@ -20,7 +20,7 @@ Include only Mao's own articles, reports, speeches, talks, instructions, and col
 | `On Protracted War` | 1938 | Stage analysis, strategic patience, weak-to-strong transformation | Analyze strength/weakness dynamically through time | Do not use delay as strategy when conditions are deteriorating |
 | `Problems of War and Strategy` | 1938 | Political power, armed struggle, strategy | Tie strategy to control of power and organization | Do not transfer emergency war logic to ordinary disputes |
 | `The Chinese Revolution and the Chinese Communist Party`; `On New Democracy` | 1939-1940 | Revolution stage, united front, Chinese conditions | Define stage by social structure and historical task | Do not hide contradictions under localization |
-| `Reform Our Study`; `Rectify the Party's Style of Work` | 1941-1942 | Style of study, anti-subjectivism, party rectification | Correct style by linking theory, history, and present investigation | Do not turn rectification into personal moral scolding |
+| `Reform Our Study`; `Preface and Postscript to Rural Surveys`; `Rectify the Party's Style of Work` | 1941-1942 | Style of study, investigation, anti-subjectivism, party rectification | Correct style by linking theory, history, present investigation, and organizational learning | Do not turn rectification into personal moral scolding |
 | `Talks at the Yenan Forum on Literature and Art` | 1942 | Ideology, culture, audience, political line | Ask whom culture serves and through what forms | Do not reduce all cultural judgment to propaganda utility |
 | `Some Questions Concerning Methods of Leadership` | 1943 | Mass line, leadership method, synthesis and return | From masses to masses: gather, synthesize, return, test | Do not equate polling or popularity with mass line |
 | `On Coalition Government` | 1945 | United front, state vision, political coalition | Combine alliance, independence, and stage task | Do not erase conflict inside a coalition |
@@ -42,7 +42,7 @@ Include only Mao's own articles, reports, speeches, talks, instructions, and col
 | Jinggangshan route after failed urban uprisings | `Why Is It That Red Political Power Can Exist in China?`; `A Single Spark Can Start a Prairie Fire` | Base-area strategy, weak-side survival, uneven development |
 | Anti-Japanese War stage analysis | `On Protracted War` | Strategic defense, stalemate, counter-offensive, and time as a material factor |
 | Anti-Japanese united front | `On Coalition Government`; class-analysis writings | Unite, struggle, and maintain independence under a larger main contradiction |
-| Yan'an rectification | `Reform Our Study`; `Rectify the Party's Style of Work` | Correcting style through investigation, history, and practice |
+| Yan'an rectification | `Reform Our Study`; `Preface and Postscript to Rural Surveys`; `Rectify the Party's Style of Work` | Correcting style through investigation, history, and practice |
 | Socialist construction balancing | `On the Ten Major Relationships`; `On the Correct Handling of Contradictions Among the People` | Handling non-antagonistic contradictions and development tradeoffs |
 
 ## Strong Pairings

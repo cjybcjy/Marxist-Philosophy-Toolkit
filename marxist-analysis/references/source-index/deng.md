@@ -13,14 +13,14 @@ Include only Deng's own speeches, talks, reports, conversations, instructions, l
 | `Emancipate the Mind, Seek Truth from Facts and Unite as One in Looking to the Future` | 1978 | Breaking doctrinal blockage, practice standard, reform opening | Use practice to reopen blocked judgment; separate real results from formula | Do not treat results worship as practice test without metrics and social effects |
 | `Uphold the Four Cardinal Principles` | 1979 | Political boundary of reform, socialist direction | Identify non-negotiable political constraints before reform design | Do not use boundaries to avoid diagnosing contradictions |
 | `On the Reform of the System of Party and State Leadership` | 1980 | Institutional reform, bureaucracy, overcentralization | Ask which institutional relation blocks capacity and accountability | Do not reduce reform to personnel change |
-| Talks on cadre system and modernization | 1980s | Cadre selection, age/knowledge/professionalization, state capacity | Link organization capacity to modernization task | Do not equate technocracy with solved class or legitimacy questions |
-| Speeches on special economic zones and opening | 1980s | Pilot zones, external learning, controlled experiment | Test a route in bounded space before broad rollout | Do not call every pilot successful without distribution and dependency checks |
-| Speeches on building socialism with Chinese characteristics | 1980s | Primary stage, local conditions, modernization route | Judge route by China's development stage and constraints | Do not use "Chinese characteristics" to skip source or contradiction analysis |
-| Productivity-standard discussions | 1980s | Productive forces as binding constraint | Ask whether a relation releases or fetters productive forces | Do not reduce socialism to growth numbers alone |
-| `One Country, Two Systems` talks | 1980s | Sovereignty, institutional coexistence, transition design | Separate strategic objective from institutional arrangement | Do not generalize the formula outside its sovereignty and transition context |
-| Speeches against bourgeois liberalization | 1980s | Reform boundary, political stability, ideological struggle | Define reform's political limits and perceived risks | Do not use ideological boundary as a substitute for material analysis |
-| Talks on peace and development | 1980s | International situation, development opportunity, external environment | Judge development route under world-system conditions | Do not ignore imperialism, dependency, or global hierarchy when relevant |
-| Southern Talks source cluster | 1992 | Route confidence, market mechanism, development urgency, reform restart | Distinguish planned/market means from socialist/capitalist ends; test by development and practice | Do not treat market success as automatic socialist success; check ownership, distribution, dependency |
+| `Respect Knowledge, Respect Trained Personnel` and cadre/intellectual work texts | 1977-1980s | Knowledge, cadres, professionalization, modernization capacity | Link organization capacity and expertise to modernization task | Do not equate technocracy with solved class or legitimacy questions |
+| Special economic zone and opening-up texts in `Selected Works of Deng Xiaoping` | 1980s | Pilot zones, external learning, controlled experiment | Test a route in bounded space before broad rollout | Do not call every pilot successful without distribution and dependency checks |
+| `Build Socialism with Chinese Characteristics` and related texts | 1980s | Primary stage, local conditions, modernization route | Judge route by China's development stage and constraints | Do not use "Chinese characteristics" to skip source or contradiction analysis |
+| Productive-forces and reform texts, including `Reform is the Only Way for China to Develop Its Productive Forces` | 1980s | Productive forces as binding constraint | Ask whether a relation releases or fetters productive forces | Do not reduce socialism to growth numbers alone |
+| `One Country, Two Systems` source cluster | 1980s | Sovereignty, institutional coexistence, transition design | Separate strategic objective from institutional arrangement | Do not generalize the formula outside its sovereignty and transition context |
+| Anti-bourgeois-liberalization and stability texts | 1980s | Reform boundary, political stability, ideological struggle | Define reform's political limits and perceived risks | Do not use ideological boundary as a substitute for material analysis |
+| Peace-and-development texts, including `Peace and Development Are the Two Outstanding Issues in the World Today` | 1980s | International situation, development opportunity, external environment | Judge development route under world-system conditions | Do not ignore imperialism, dependency, or global hierarchy when relevant |
+| `Excerpts from Talks Given in Wuchang, Shenzhen, Zhuhai and Shanghai` / Southern Talks | 1992 | Route confidence, market mechanism, development urgency, reform restart | Distinguish planned/market means from socialist/capitalist ends; test by development and practice | Do not treat market success as automatic socialist success; check ownership, distribution, dependency |
 
 ## Method Extraction Tests
 
@@ -35,9 +35,9 @@ Include only Deng's own speeches, talks, reports, conversations, instructions, l
 | --- | --- | --- |
 | 1978 ideological route reset | `Emancipate the Mind...` | Practice standard as a way to break formulaic blockage |
 | 1980 party-state leadership reform | `On the Reform of the System of Party and State Leadership` | Institutional bottlenecks and state-capacity reform |
-| Special economic zones | SEZ and opening speeches | Bounded pilot, external learning, and expansion by evidence |
-| One country, two systems | Relevant talks and speeches | Strategic objective with flexible institutional arrangement |
-| 1992 Southern Talks | Southern Talks source cluster | Reform restart, market mechanism, and development-stage urgency |
+| Special economic zones | Special economic zone and opening-up texts in `Selected Works of Deng Xiaoping` | Bounded pilot, external learning, and expansion by evidence |
+| One country, two systems | `One Country, Two Systems` source cluster | Strategic objective with flexible institutional arrangement |
+| 1992 Southern Talks | `Excerpts from Talks Given in Wuchang, Shenzhen, Zhuhai and Shanghai` / Southern Talks | Reform restart, market mechanism, and development-stage urgency |
 
 ## Strong Pairings
 
