@@ -18,6 +18,7 @@ Primary texts and documents
 - Distinguish text, context, later interpretation, and inference.
 - Do not quote without explaining the method the quote supports.
 - Do not use isolated slogans as proof.
+- Do not treat repeated use of the same source cluster as stronger evidence; load `source-coverage.md` when anchors repeat across unrelated questions.
 - For translated texts, note that translation may affect terms.
 - For current facts, verify with current sources when tools are available.
 - When evidence is weak, say what is missing.

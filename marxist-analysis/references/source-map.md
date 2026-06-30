@@ -8,6 +8,7 @@ This map links reusable methods to source clusters. It is a navigation aid, not 
 2. Load the primary theme.
 3. Use the source anchors to ground the concept.
 4. State the historical task and boundary before applying it to today.
+5. If the same anchors keep appearing across unrelated questions, load `source-coverage.md` before adding more quotations.
 
 ## Method Map
 
@@ -44,6 +45,15 @@ Use text titles as anchors, not as decorative quotations.
 | Mass line | Mao's `Some Questions Concerning Methods of Leadership`, investigation prefaces | From masses to masses, synthesis, return, testing | Do not equate popularity with correctness |
 | Development and reform | Deng's reform, opening, productivity, and Southern Talks source cluster | Stage judgment, productive forces, practice standard | Do not reduce all judgment to growth numbers |
 | Sinicization | Mao on new democracy and Chinese conditions; Deng on socialism with Chinese characteristics | Adapt universal method to concrete conditions | Do not hide contradictions under "localization" |
+
+## Coverage Warning
+
+If a figure module only has a compact source base, do not stretch it into a full-text authority. Use `source-coverage.md` to decide whether to:
+
+- reuse the method without repeating the quote,
+- broaden to another source cluster,
+- admit that exact textual grounding requires external corpus search,
+- route back to a theme module instead of a figure voice.
 
 ## Figure-to-Question Map
 

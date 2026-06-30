@@ -1,17 +1,18 @@
 # Dispatcher
 
-Use this file to route a user question before loading detailed modules.
+Use this file to route a user question before loading detailed modules. After the first split, load `scenario-checkpoints.md` for real-world, practice, conflict, concept, source-coverage, or skill-evolution tasks that need a pre-answer gate.
 
 ## First Split
 
 | User asks | Treat as | Load first |
 | --- | --- | --- |
-| "What does X mean?" | Concept explanation | Relevant theme, then `source-map.md` |
-| "Analyze this industry/company/policy" | Reality analysis | Relevant protocol, then themes |
-| "What is the main contradiction?" | Contradiction diagnosis | `themes/dialectics-contradiction.md` |
-| "What should I do?" | Practice problem | `protocols/personal-practice.md` |
-| "Why did A differ from B?" | Route conflict | `arbitration.md` |
-| "Where does this come from?" | Source grounding | `source-policy.md`, `source-map.md` |
+| "What does X mean?" | Concept explanation | `scenario-checkpoints.md`, relevant theme, then `source-map.md` |
+| "Analyze this industry/company/policy" | Reality analysis | `scenario-checkpoints.md`, relevant protocol, then themes |
+| "What is the main contradiction?" | Contradiction diagnosis | `scenario-checkpoints.md`, `themes/dialectics-contradiction.md` |
+| "What should I do?" | Practice problem | `scenario-checkpoints.md`, `protocols/personal-practice.md` |
+| "Why did A differ from B?" | Route conflict | `scenario-checkpoints.md`, `arbitration.md` |
+| "Where does this come from?" | Source grounding | `scenario-checkpoints.md`, `source-policy.md`, `source-map.md` |
+| "Can we borrow from X?" / "Don't reinvent the wheel" | Prior-art reuse | `prior-art-scan.md`, `source-policy.md`, then affected protocol or evolution files |
 
 If the question includes a current company, market, law, policy, price, schedule, election, war, or public figure's current position, verify current facts before analysis when tools are available.
 

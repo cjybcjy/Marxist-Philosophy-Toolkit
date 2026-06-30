@@ -8,6 +8,14 @@ Use this protocol when the user asks about execution, avoidance, learning, caree
 main contradiction -> small base area -> minimum action -> practice feedback -> revised line
 ```
 
+## Required References
+
+- Load `references/practice-cards.md` when the user needs a concrete next action, 7 to 14 day experiment, or review rule.
+- Load `references/practice-metrics.md` whenever you define a practice test or review loop.
+- Load `references/fallbacks.md` when the user gives too little context for a confident contradiction judgment.
+- Load `references/constraint-map.md` before treating the problem as personal willpower.
+- Load `references/risk-and-inversion.md` before suggesting career, money, relationship, health, or high-stakes commitments.
+
 ## Steps
 
 1. Name the real problem, not the moral label.

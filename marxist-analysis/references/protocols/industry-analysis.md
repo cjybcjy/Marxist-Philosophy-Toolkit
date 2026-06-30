@@ -5,6 +5,9 @@ Use this protocol for companies, sectors, platforms, technology trends, supply c
 ## Required References
 
 - Load `references/source-policy.md` before citing current market facts, study results, company data, regulation, pricing, or adoption claims.
+- Load `references/constraint-map.md` before judging whether the industry is mainly constrained by technology, ownership, labor, platform control, regulation, or ideology.
+- Load `references/risk-and-inversion.md` before giving strategy, investment-style, or policy-action advice.
+- Load `references/practice-metrics.md` when defining what evidence would confirm or weaken the thesis.
 - Load `references/themes/political-economy.md` and `references/themes/historical-materialism.md`.
 - Load `references/figures/marx-engels.md` for value, labor, surplus, and capital relations.
 
@@ -18,6 +21,30 @@ Use this protocol for companies, sectors, platforms, technology trends, supply c
 6. Identify the main contradiction of the industry.
 7. Identify stage: emergence, expansion, monopoly, crisis, regulation, or restructuring.
 8. Define what evidence would confirm or weaken the thesis.
+
+## Platform And AI Sector Card
+
+For AI, software, platform, data, creator, marketplace, or tool sectors, split the value chain more finely:
+
+| Layer | Ask |
+| --- | --- |
+| Model or core technology | What capability changes the labor process? |
+| Compute and infrastructure | Who controls cost, capacity, and scaling limits? |
+| Data and IP | Whose data, code, content, feedback, or behavior improves the product? |
+| Integration and workflow | Where does the tool enter daily production? |
+| Distribution and platform access | Who controls user acquisition, defaults, app stores, IDEs, cloud channels, or enterprise procurement? |
+| Feedback loop | Does user labor or usage data strengthen the product owner's position? |
+| Switching cost | Who becomes dependent after adoption? |
+
+Then separate two questions:
+
+```text
+Productivity question:
+- What labor time, error rate, coordination cost, or capability bottleneck is reduced?
+
+Surplus-capture question:
+- Who owns the tool, data, workflow gate, pricing power, and customer relationship that captures the gain?
+```
 
 ## Current-Fact Handling
 
@@ -34,6 +61,12 @@ If current evidence is unavailable or unverified, state the missing evidence ins
 - 核心环节：
 - 下游：
 - 隐藏劳动/外部化成本：
+- 数据/IP/反馈闭环：
+- 平台入口/切换成本：
+
+生产力与剩余捕获：
+- 生产力可能提升在：
+- 剩余可能被捕获在：
 
 主要矛盾：
 - [contradiction]
@@ -47,8 +80,11 @@ If current evidence is unavailable or unverified, state the missing evidence ins
 - 当前阶段：
 - 下一阶段触发条件：
 
-证据缺口：
-- 还缺什么数据：
+证据计划：
+- 当前事实缺口：
+- 能支持判断的证据：
+- 能推翻判断的证据：
+- 复盘指标：
 ```
 
 ## Anti-Patterns
@@ -57,3 +93,4 @@ If current evidence is unavailable or unverified, state the missing evidence ins
 - Do not confuse user convenience with social liberation.
 - Do not ignore labor, data, infrastructure, and regulation.
 - Do not cite recent studies or market claims without marking whether they were verified in the current session.
+- Do not say "productivity improved" without asking who captures the saved time, data, bargaining power, and dependency.

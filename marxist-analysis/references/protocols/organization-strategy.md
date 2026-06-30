@@ -8,6 +8,10 @@ Use this protocol for team conflict, party/organization questions, movement stra
 - Load `references/themes/class-state-party.md` for organization and power-position mapping.
 - Load `references/figures/mao.md` when the answer uses main contradiction, practice testing, or mass-line style investigation.
 - Load `references/figures/lenin.md` only when party form, discipline, state power, or revolutionary organization is directly relevant.
+- Load `references/practice-cards.md` when the answer must produce an organizational experiment or review loop.
+- Load `references/practice-metrics.md` to define start, process, result, contradiction, and review metrics for the experiment.
+- Load `references/constraint-map.md` to separate authority, information flow, incentives, legitimacy, and execution capacity.
+- Load `references/risk-and-inversion.md` before changing roles, authority, pay, metrics, or public commitments.
 
 ## Steps
 

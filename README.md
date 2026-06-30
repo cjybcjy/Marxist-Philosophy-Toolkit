@@ -106,11 +106,25 @@ marxist-analysis/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
+├── examples/
+│   └── demo-conversation.md
 └── references/
     ├── dispatcher.md
+    ├── scenario-checkpoints.md
     ├── arbitration.md
+    ├── fallbacks.md
+    ├── practice-cards.md
+    ├── practice-metrics.md
+    ├── concept-debugging.md
+    ├── constraint-map.md
+    ├── risk-and-inversion.md
     ├── source-policy.md
     ├── source-map.md
+    ├── source-coverage.md
+    ├── prior-art-scan.md
+    ├── evaluation-rubric.md
+    ├── evolution-protocol.md
+    ├── coverage-matrix.md
     ├── evaluation-scenarios.md
     ├── figures/
     │   ├── marx-engels.md
@@ -159,6 +173,22 @@ marxist-analysis/
 - 应该用哪些人物模块校准？
 - 是否需要进入冲突裁决？
 
+### `scenario-checkpoints.md`
+
+场景检查点。用于在正式回答前先过一遍“这个问题能不能答、该怎么答”的三问闸门。
+
+每个场景先检查：
+
+```text
+对象是什么？
+已知/缺失/需验证的事实是什么？
+用户要的是解释、诊断、决策、来源，还是实践方案？
+```
+
+然后按场景追加检查，例如行业分析要先问商品、价值链、剩余捕获；个人实践要先问下一周期矛盾、最小根据地和复盘指标；组织问题要先问路线、资源、权威、合法性还是能力冲突。
+
+它的作用是防止 Agent 一上来就套理论，而是先确认现实对象和回答任务。
+
 ### `arbitration.md`
 
 冲突裁决规则。负责处理不同路线、不同阶段、不同人物模块之间的张力。
@@ -202,6 +232,33 @@ marxist-analysis/
 | 国家分析 | 《国家与革命》 | 国家机器、政党、组织与革命策略 |
 | 发展阶段 | 邓小平相关论述 | 初级阶段、改革、生产力标准 |
 
+### `source-coverage.md`
+
+来源覆盖与论据去重。用于处理“多问几轮之后总是复用同几篇文章、同几个例子”的问题。
+
+它要求 Agent 在继续回答前先判断：
+
+- 已经反复使用了哪些来源。
+- 当前问题真正需要哪些来源簇。
+- 是继续用同一方法、换到另一个主题/人物模块，还是承认当前语料不足。
+- 是否需要外部全文库或当前资料验证。
+
+它的目标不是多堆引用，而是防止把少数经典文本当成万能钥匙。
+
+### `prior-art-scan.md`
+
+成熟方案扫描。用于处理“参考 SkillOpt、Darwin、Nuwa、X Mentor 或其他已实现 skill，不要重复造轮子”的需求。
+
+它要求在设计新机制前先判断：
+
+- 目标能力是什么。
+- 已有哪些成熟 repo、论文、skill 或文档可以参考。
+- 哪些机制可迁移，哪些假设不能照搬。
+- 本地最小补丁是什么。
+- 用哪些场景、相邻场景和 holdout 验证。
+
+它的目标不是照抄外部项目，而是把成熟机制变成可验证的本地行为。
+
 ### `evaluation-scenarios.md`
 
 评测场景。用于在每次大改后压测 Skill 是否会退化成圆桌会谈、口号解释、原文堆砌或无实践方案的回答。
@@ -213,8 +270,318 @@ marxist-analysis/
 - 中国化与背离问题
 - 组织路线冲突
 - 原文依据追问
+- 事实不足时的降级处理和实践卡片
+- 技能自身迭代时的失败轨迹、评分和验证门
+- 来源覆盖不足时的论据去重和语料边界
+- 场景化问题的开答前检查点
+- 借鉴外部成熟方案前的 prior-art scan
+
+这些场景按用途分成三组：
+
+```text
+Train：用来诊断和设计补丁
+Validation：用来检查补丁是否泛化
+Holdout：保留不用来调参，防止只优化熟题
+```
+
+默认每次迭代至少跑：
+
+```text
+1 个 train 场景 + 1 个 validation 场景 + 1 个 holdout 场景
+```
+
+### `coverage-matrix.md`
+
+覆盖矩阵。用于回答“一个场景是不是太窄”“当前评测有没有压到某类问题”。
+
+它把这些东西连起来：
+
+```text
+问题类型
+已有场景
+主要模块
+已覆盖失败模式
+已知缺口
+```
+
+它不证明 skill 已经全面，只帮助维护者判断下一步是：
+
+```text
+补模块
+补场景
+补评分标准
+还是承认这是暂未覆盖的缺口
+```
+
+### `evaluation-rubric.md`
+
+评分准绳。用于判断一次回答到底是“方法有效”，还是只是看起来像马哲。
+
+它不按政治结论打分，而按行为打分：
+
+```text
+路由是否正确
+事实和来源边界是否清楚
+约束和利益结构是否拆开
+主要矛盾和阶段判断是否成立
+实践方案是否有指标
+风险和停止条件是否说明
+是否避免人物扮演、口号化和圆桌化
+```
+
+### `evolution-protocol.md`
+
+技能进化协议。借鉴 SkillOpt 的思想，但做成轻量版：
+
+```text
+RED 失败轨迹 -> 评分诊断 -> 最小模块修改 -> 验证场景 -> 保留场景 -> 再决定是否沉淀到总控
+```
+
+它的核心要求是：不要为了一个样例去优化答案，而要优化产生答案的 skill 行为；每次改动都应该有失败证据、评分维度、最小修改点和验证门。
+
+### `fallbacks.md`
+
+失败修复树。用于处理事实不足、主要矛盾不清、回答口号化、人物圆桌化、当前事实不稳定等情况。
+
+核心原则：
+
+```text
+不能判断就不要硬判。
+先列候选矛盾，再定义能改变判断的证据。
+```
+
+### `practice-cards.md`
+
+实践卡片库。把抽象分析转成可填写的小卡片，包括主要矛盾卡、小实践卡、利益结构卡、群众调查卡、路线实验卡和复盘卡。
+
+它的作用是让回答落到：
+
+```text
+今天做什么
+7 到 14 天看什么
+失败后怎么修正
+```
+
+### `practice-metrics.md`
+
+实践指标。用于防止“实践检验”变成空话。它要求每个小实验至少说明：
+
+```text
+启动指标
+过程指标
+结果指标
+矛盾判断指标
+复盘指标
+```
+
+### `concept-debugging.md`
+
+概念调试。用于防止“知道术语名字”被误认为理解。它要求每个概念说明：
+
+```text
+解决什么现实问题
+操作定义是什么
+具体例子是什么
+边界和误用信号是什么
+如何回到当前问题
+```
+
+### `constraint-map.md`
+
+约束地图。用于在下判断前拆出现实边界，避免把所有问题都归结为意志、态度或抽象路线。
+
+它要求先看：
+
+```text
+物质/技术约束
+生产力约束
+生产关系约束
+组织能力约束
+信息流约束
+激励结构约束
+意识形态/叙事约束
+```
+
+### `risk-and-inversion.md`
+
+风险与逆向检查。用于在给行动方案前先问“这个方案怎么失败，谁承担代价，失败是否可逆”。
+
+它特别适合：
+
+```text
+辞职、创业、投资、组织改组、公开承诺、高成本试验
+```
+
+### `examples/demo-conversation.md`
+
+示例对话。展示弱回答和方法型回答的差别，帮助维护者判断这个 Skill 是否真的从“解释理论”推进到“指导实践”。
+
+## 安装
+
+本项目基于开放的 Agent Skills 目录约定：真正要安装的是仓库里的 `marxist-analysis/` 目录，而不是仓库根目录。
+
+### 安装条件
+
+- 一个支持 Agent Skills 的 AI Agent runtime，例如 Codex、Claude Code、Cursor、OpenClaw 等。
+- 使用一行安装时需要 Node.js / npm，因为会调用 `npx skills add`。
+- 手动安装时需要 Git，或者直接下载本仓库 zip 后复制 `marxist-analysis/` 目录。
+- 本 Skill 不依赖外部知识库即可运行；如果以后需要精确原文检索，可以再接外挂语料库。
+
+常见安装路径：
+
+| Runtime | 安装目录 |
+| --- | --- |
+| Codex | `~/.codex/skills/marxist-analysis/` |
+| Claude Code | `~/.claude/skills/marxist-analysis/` |
+| Cursor | `~/.cursor/skills/marxist-analysis/` |
+| OpenClaw | `~/.openclaw/workspace/skills/marxist-analysis/` |
+
+### 方式一：一行安装
+
+如果仓库已经推送到 GitHub，可以使用 `skills` 安装器从仓库根目录发现并安装 `marxist-analysis`：
+
+```bash
+npx skills add https://github.com/cjybcjy/Marxist-Philosophy-Toolkit -g -a codex --skill marxist-analysis --full-depth
+```
+
+如果安装器提示找不到 skill，先确认远端仓库已包含 `marxist-analysis/SKILL.md`；如果安装器版本较旧或不识别 `codex` / `--full-depth`，请使用下面的手动安装方式。这是当前最稳定的安装路径。
+
+### 方式二：手动安装到 Codex
+
+```bash
+git clone https://github.com/cjybcjy/Marxist-Philosophy-Toolkit /tmp/Marxist-Philosophy-Toolkit
+SKILLS_DIR="${CODEX_HOME:-$HOME/.codex}/skills"
+mkdir -p "$SKILLS_DIR/marxist-analysis"
+rsync -a /tmp/Marxist-Philosophy-Toolkit/marxist-analysis/ "$SKILLS_DIR/marxist-analysis/"
+```
+
+安装后检查：
+
+```bash
+test -f "${CODEX_HOME:-$HOME/.codex}/skills/marxist-analysis/SKILL.md"
+```
+
+### 方式三：手动安装到 Claude Code
+
+```bash
+git clone https://github.com/cjybcjy/Marxist-Philosophy-Toolkit /tmp/Marxist-Philosophy-Toolkit
+mkdir -p "$HOME/.claude/skills/marxist-analysis"
+rsync -a /tmp/Marxist-Philosophy-Toolkit/marxist-analysis/ "$HOME/.claude/skills/marxist-analysis/"
+```
+
+### 开发者验证
+
+如果你在 Codex 开发环境里维护本仓库，可以用本地校验脚本确认 skill 结构有效：
+
+```bash
+python3 /Users/kyrie/.codex/skills/.system/skill-creator/scripts/quick_validate.py marxist-analysis
+```
+
+预期输出：
+
+```text
+Skill is valid!
+```
+
+还可以检查安装副本：
+
+```bash
+python3 /Users/kyrie/.codex/skills/.system/skill-creator/scripts/quick_validate.py "${CODEX_HOME:-$HOME/.codex}/skills/marxist-analysis"
+```
+
+### 更新
+
+重新拉取仓库后覆盖安装目录即可：
+
+```bash
+cd /tmp/Marxist-Philosophy-Toolkit
+git pull
+SKILLS_DIR="${CODEX_HOME:-$HOME/.codex}/skills"
+mkdir -p "$SKILLS_DIR/marxist-analysis"
+rsync -a --delete marxist-analysis/ "$SKILLS_DIR/marxist-analysis/"
+```
+
+### 卸载
+
+删除对应 runtime 的 skill 目录：
+
+```bash
+rm -rf "${CODEX_HOME:-$HOME/.codex}/skills/marxist-analysis"
+```
+
+Claude Code 用户对应删除：
+
+```bash
+rm -rf "$HOME/.claude/skills/marxist-analysis"
+```
 
 ## 使用方法
+
+### 触发提示词
+
+这个 Skill 可以被“明确点名”触发，也可以被“分析意图”触发。好的触发 prompt 通常包含三件事：
+
+```text
+理论视角 / 方法词 + 具体对象 + 想要的输出边界
+```
+
+推荐使用这些触发词：
+
+```text
+马哲
+马克思主义分析
+历史唯物主义
+辩证分析
+批判思维
+实事求是
+实践检验
+主要矛盾
+利益结构
+阶级 / 国家 / 政党
+邓论
+邓小平理论
+改革开放
+发展阶段
+生产力
+中国化马克思主义
+```
+
+可直接这样问：
+
+```text
+用马哲分析一下 AI 编程工具这个行业：它到底提高生产力，还是加强剥削？
+```
+
+```text
+用实事求是的方法帮我拆这个选择：我是否该辞职做 AI 项目？
+```
+
+```text
+用邓论 / 发展阶段的视角分析改革为什么必要，但不要口号化。
+```
+
+```text
+用辩证分析判断这个团队的主要矛盾，并给一个一周实验。
+```
+
+```text
+用批判思维检查我这个判断有没有把“发展生产力”当成结论。
+```
+
+```text
+不要人物扮演，用马克思主义方法分析这个政策 / 行业 / 组织问题。
+```
+
+不推荐的触发方式：
+
+```text
+扮演马克思 / 毛泽东 / 邓小平
+马克思会怎么说
+给我背几句原文
+直接给结论，不用分析条件
+```
+
+这些问法容易把 Skill 带成“人物模仿”“语录堆砌”或“立场先行”。本项目更适合被触发为一个方法工具箱：先问现实条件，再拆主要矛盾、利益结构、阶段判断，最后落到小实验和实践检验。
 
 用户可以直接提出现实问题，例如：
 
@@ -443,11 +810,16 @@ protocols:
 
 - 是否先判断了问题类型？
 - 是否补充或追问了现实条件？
+- 是否先拆出决定性约束，而不是直接给路线？
+- 如果是概念解释，是否给出操作定义、例子、边界和误用信号？
 - 是否指出主要矛盾？
+- 如果事实不足，是否避免硬判，并列出候选矛盾和验证条件？
 - 是否拆出利益结构？
 - 是否说明所用主题和人物来源？
 - 是否处理了不同来源之间的张力？
-- 是否给出实践检验方案？
+- 是否检查下行风险、可逆性、激励扭曲和停止条件？
+- 是否给出实践检验方案或填写了合适的实践卡片？
+- 实践检验是否有启动、过程、结果、矛盾判断和复盘指标？
 - 是否避免人物扮演和口号化？
 
 ## 项目一句话
@@ -459,3 +831,7 @@ protocols:
 为了不变成大杂烩，必须有总控调度和冲突裁决。
 
 最终目标不是生成一个“马克思主义声音”，而是训练一个能分析现实、制定小实验、接受实践检验的马克思主义方法工具箱。
+
+## 许可证
+
+本项目采用 MIT License，见 `LICENSE`。
