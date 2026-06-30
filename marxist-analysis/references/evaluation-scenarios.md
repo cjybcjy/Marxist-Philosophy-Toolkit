@@ -23,7 +23,7 @@ Use these groups to avoid optimizing the skill only against familiar prompts.
 | Group | Scenarios | Use | Rule |
 | --- | --- | --- | --- |
 | Train | 1. Industry Analysis; 2. Personal Practice; 4. Organization Strategy; 6. Fallback And Practice Cards | Diagnose common failures and design bounded patches | Pass criteria may be inspected while designing the edit |
-| Validation | 3. Sinicization Conflict; 7. Constraint And Risk Gate; 8. Concept Debugging; 10. Source Coverage And Argument Reuse; 11. Scenario Checkpoint Gate; 12. Prior-Art Reuse Gate | Check whether a patch generalizes across tension, risk, concept, source-coverage, scenario-gate, and prior-art reuse tasks | Do not change validation criteria in the same iteration |
+| Validation | 3. Sinicization Conflict; 7. Constraint And Risk Gate; 8. Concept Debugging; 10. Source Coverage And Argument Reuse; 11. Scenario Checkpoint Gate; 12. Prior-Art Reuse Gate; 13. Author-Only Source And Case Calibration; 14. Framework Synthesis And Method Templates | Check whether a patch generalizes across tension, risk, concept, source-coverage, scenario-gate, prior-art reuse, source-index, and framework-template tasks | Do not change validation criteria in the same iteration |
 | Holdout | 5. Source Challenge; 9. Skill Evolution | Catch overfitting to user-facing analysis and self-edit workflows | Do not tune directly against these scenarios during the same iteration |
 
 Default iteration pattern:
@@ -52,6 +52,8 @@ Use `coverage-matrix.md` before adding scenarios. The matrix records which probl
 | 10. Source Coverage And Argument Reuse | Validation | Repeated source anchors, hidden corpus gaps, citation padding |
 | 11. Scenario Checkpoint Gate | Validation | Answering before object, facts, and expected output are clear |
 | 12. Prior-Art Reuse Gate | Validation | Reinventing workflow or optimizer without checking mature schemes |
+| 13. Author-Only Source And Case Calibration | Validation | Secondary commentary treated as primary text, false historical analogy |
+| 14. Framework Synthesis And Method Templates | Validation | Raw original-text pile, textbook-only answer, missing standardized method |
 
 ## Scenario 1: Industry Analysis
 
@@ -459,6 +461,75 @@ Use `coverage-matrix.md` before adding scenarios. The matrix records which probl
 - Ignores verification, validation, holdout, or revert conditions.
 - Treats current GitHub repo behavior as known without verification when current sources are available.
 
+## Scenario 13: Author-Only Source And Case Calibration
+
+**User prompt**
+
+```text
+我要给 Deng 和 Lenin 模块补来源。能不能直接用传记、教材、商业解读和网上总结？另外，如果把南方谈话、NEP、井冈山都拿来类比创业公司，怎么避免只是讲故事？
+```
+
+**Required route**
+
+- `references/source-policy.md`
+- `references/source-map.md`
+- `references/source-coverage.md`
+- Relevant source-index files
+- `references/cases/figure-case-calibration.md`
+- Optional: affected figure modules
+
+**Must include**
+
+- State the author-only source rule: use the figure's own works, speeches, reports, talks, letters, or collected works.
+- Downgrade biographies, textbooks, business reinterpretations, and web summaries to `later-interpretation` or `historical-context`.
+- Explain that search metadata can identify candidate titles but is not evidence.
+- For case analogies, require source text, historical object, shared mechanism, different conditions, and non-transferable parts.
+- Give at least one Deng and one Lenin source-index example.
+- Say when to admit a source gap instead of filling it with commentary.
+
+**Fail if**
+
+- Treats biography or commentary as the figure's own source.
+- Uses business analogies as proof.
+- Says "just add more books" without source-status tags.
+- Applies NEP, Southern Talks, or Jinggangshan without naming different conditions.
+- Converts the figure module into persona style or quote stock.
+
+## Scenario 14: Framework Synthesis And Method Templates
+
+**User prompt**
+
+```text
+只啃马恩列毛邓原著好像太散。我们要不要用《马克思主义基本原理概论》这类教材先搭理论框架，再把矛盾分析、实践检验、历史唯物主义分析做成固定模板？怎么防止教材替代原著，或者把历史结论直接套到 AI 行业？
+```
+
+**Required route**
+
+- `references/theory-framework.md`
+- `references/method-templates.md`
+- `references/source-policy.md`
+- `references/source-map.md`
+- `references/source-coverage.md`
+- Optional: `references/concept-debugging.md`
+- Optional: affected themes or source-index files
+
+**Must include**
+
+- Classify textbook/basic-principles material as `framework-synthesis`, not `primary-text`.
+- Keep primary texts as source authority and current facts as modern factual evidence.
+- Explain the four layers: framework, primary source, method template, current facts/practice.
+- Separate universal method from stage-specific historical conclusion.
+- Name at least two reusable templates, such as contradiction analysis and historical-materialist analysis.
+- State that later Chinese theory modules need their own source indexes and scenarios before being treated as covered.
+
+**Fail if**
+
+- Says "use textbooks" without source-status boundary.
+- Treats textbook definitions as enough for real-world analysis.
+- Treats primary texts as unusable because they are unsystematic.
+- Applies historical conclusions directly to AI, platforms, or finance without current facts.
+- Adds later Chinese theory labels without source modules.
+
 ## Global Pass Criteria
 
 Across all scenarios, a passing answer must:
@@ -476,6 +547,9 @@ Across all scenarios, a passing answer must:
 - Check decisive constraints and downside before recommending high-stakes action.
 - Use failure traces, rubrics, bounded edits, and holdout checks when improving the skill itself.
 - Check mature prior art before inventing a new workflow, evaluator, or automation loop.
+- Use author-only source indexes when grounding figure modules.
+- Calibrate historical cases by shared mechanism and different conditions, not inspiration.
+- Use framework synthesis for taxonomy and templates, while preserving primary texts and current facts as separate evidence layers.
 
 ## Global Failure Signals
 
@@ -487,3 +561,6 @@ Across all scenarios, a passing answer must:
 - A skill edit proposal with no RED failure trace or validation gate.
 - Repeated use of the same source anchors as universal proof after a source-coverage complaint.
 - A new workflow or optimizer designed without a prior-art scan.
+- Biography, commentary, textbook, or business reinterpretation presented as the figure's own work.
+- Historical case analogy used as proof without condition differences.
+- Textbook framework presented as sufficient proof or as a substitute for current-fact investigation.

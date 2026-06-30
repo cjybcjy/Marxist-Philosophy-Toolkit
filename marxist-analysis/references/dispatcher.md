@@ -1,6 +1,6 @@
 # Dispatcher
 
-Use this file to route a user question before loading detailed modules. After the first split, load `scenario-checkpoints.md` for real-world, practice, conflict, concept, source-coverage, or skill-evolution tasks that need a pre-answer gate.
+Use this file to route a user question before loading detailed modules. After the first split, load `scenario-checkpoints.md` for real-world, practice, conflict, concept, source-coverage, framework-template, or skill-evolution tasks that need a pre-answer gate.
 
 ## First Split
 
@@ -12,6 +12,7 @@ Use this file to route a user question before loading detailed modules. After th
 | "What should I do?" | Practice problem | `scenario-checkpoints.md`, `protocols/personal-practice.md` |
 | "Why did A differ from B?" | Route conflict | `scenario-checkpoints.md`, `arbitration.md` |
 | "Where does this come from?" | Source grounding | `scenario-checkpoints.md`, `source-policy.md`, `source-map.md` |
+| "Do we need a textbook/framework/template?" | Theory framework or method template | `scenario-checkpoints.md`, `theory-framework.md`, `method-templates.md`, `source-policy.md` |
 | "Can we borrow from X?" / "Don't reinvent the wheel" | Prior-art reuse | `prior-art-scan.md`, `source-policy.md`, then affected protocol or evolution files |
 
 If the question includes a current company, market, law, policy, price, schedule, election, war, or public figure's current position, verify current facts before analysis when tools are available.
@@ -21,6 +22,7 @@ If the question includes a current company, market, law, policy, price, schedule
 | Problem domain | Themes | Figures | Notes |
 | --- | --- | --- | --- |
 | Capital, commodity, labor, profit, exploitation | `political-economy`, `historical-materialism` | `marx-engels` | Start from production relation and value chain, not morality |
+| Concept taxonomy, textbook framework, method templates | `theory-framework`, relevant theme | Relevant source index only when grounding is needed | Use framework synthesis for classification, not primary proof |
 | Imperialism, state machine, party, revolutionary organization | `class-state-party` | `lenin`, `marx-engels` | Ask what apparatus controls coercion and coordination |
 | Main contradiction, strategy, investigation, mass line | `dialectics-contradiction`, `mass-line` | `mao` | Move from contradiction to concrete practice |
 | Development stage, productivity, reform, opening, policy tradeoff | `reform-development`, `historical-materialism` | `deng`, optional `mao` | Ask what stage permits and blocks |

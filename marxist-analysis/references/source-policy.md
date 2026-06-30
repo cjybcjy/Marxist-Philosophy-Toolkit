@@ -7,11 +7,38 @@ Use this file when grounding claims in texts, history, policy, or current facts.
 ```text
 Primary texts and documents
 > authoritative collected works or official document collections
+> official or authoritative framework synthesis for taxonomy
 > historical records and speeches with context
 > peer-reviewed or serious scholarly research
 > high-quality secondary interpretation
 > web summaries and popular commentary
 ```
+
+## Author-Only Source Rule
+
+When building source indexes or grounding a figure module, include only the figure's own works:
+
+- works, articles, books, reports, speeches, talks, letters, instructions, prefaces, and jointly authored texts;
+- authoritative collected works when they preserve the authored text;
+- verbatim excerpts from a biography or chronology only when the titled original work is identifiable.
+
+Exclude:
+
+- biographies, memoirs about the figure, textbooks, readers' guides, popular explainers, business-strategy reinterpretations, and AI summaries;
+- later party, academic, or commentator interpretations unless the answer explicitly asks for later interpretation;
+- book-search metadata, covers, catalog blurbs, and table-of-contents snippets as evidence.
+
+External book-search sites can help identify candidate titles or editions, but a search result is only a bibliographic hint. Do not treat it as `primary-text`.
+
+## Framework Synthesis Rule
+
+Basic-principles textbooks and systematic theory courses can be used as `framework-synthesis`:
+
+- Use them to organize concept families, teaching order, and standard distinctions.
+- Use them to decide whether a question belongs to dialectical materialism, epistemology, historical materialism, political economy, or reform-development.
+- Use them to standardize reusable templates.
+
+Do not use them as proof that Marx, Engels, Lenin, Mao, or Deng personally made a claim. For source authority, return to primary texts and source indexes.
 
 ## Source Rules
 
@@ -42,11 +69,22 @@ Use these labels when grounding an answer:
 | --- | --- |
 | `primary-text` | Direct work, speech, report, letter, or official document |
 | `historical-context` | Material conditions, political conflict, institutional setting around the text |
+| `framework-synthesis` | Textbook or systematic theory framework used for taxonomy, ordering, or standard method extraction |
 | `later-interpretation` | A scholar, party document, commentator, or later tradition interpreting the text |
 | `inference` | The agent's own application of a method to the user's problem |
 | `current-fact` | A fact about today's market, law, company, person, or policy that may change |
 
 Never present `inference` as if it were `primary-text`.
+
+## Source Index Protocol
+
+When the user asks for source grounding, method granularity, or whether a figure corpus is strong enough:
+
+1. Load `source-map.md`.
+2. Load the relevant source-index file.
+3. Identify whether the needed support is `primary-text`, `historical-context`, `later-interpretation`, or `inference`.
+4. If only secondary material is available, say the author-only source is missing.
+5. If using a case analogy, load `cases/figure-case-calibration.md` and name both the shared mechanism and the different conditions.
 
 ## Citation Use
 

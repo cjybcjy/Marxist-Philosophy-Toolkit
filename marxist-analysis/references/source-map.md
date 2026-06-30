@@ -9,6 +9,18 @@ This map links reusable methods to source clusters. It is a navigation aid, not 
 3. Use the source anchors to ground the concept.
 4. State the historical task and boundary before applying it to today.
 5. If the same anchors keep appearing across unrelated questions, load `source-coverage.md` before adding more quotations.
+6. When author-only grounding, method granularity, or case calibration matters, load the relevant source-index file.
+
+## Detailed Source Indexes
+
+Use these when a figure module needs more than a compact anchor list:
+
+| Figure | Source index | Use when |
+| --- | --- | --- |
+| Marx and Engels | `source-index/marx-engels.md` | Capital, class, historical materialism, state form, transition, ideology |
+| Lenin | `source-index/lenin.md` | Imperialism, state machine, party organization, tactical route, NEP, bureaucracy |
+| Mao | `source-index/mao.md` | Contradiction, practice, investigation, mass line, base areas, united front, construction contradictions |
+| Deng | `source-index/deng.md` | Reform, development stage, productivity, pilot zones, opening, practice standard |
 
 ## Method Map
 
@@ -63,6 +75,10 @@ If a figure module only has a compact source base, do not stretch it into a full
 | `figures/lenin.md` | Imperialism, state machine, party organization, revolutionary strategy | Do not universalize wartime/revolutionary conditions |
 | `figures/mao.md` | Contradiction, practice, investigation, mass line, base areas, strategy | Do not turn every problem into direct struggle; identify conditions first |
 | `figures/deng.md` | Development stage, productivity, reform, practice standard | Do not reduce all questions to growth; check social relation and distribution effects |
+
+## Case Calibration
+
+When applying a figure's method through a historical case, load `cases/figure-case-calibration.md`. A case can calibrate conditions and boundaries; it is not proof that the user's modern object is the same.
 
 ## Source-Grounded Output
 

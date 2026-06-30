@@ -6,6 +6,8 @@ Analyze imperialism, state power, party organization, revolutionary strategy, an
 
 ## Source Anchors
 
+For author-only grounding and method granularity, load `references/source-index/lenin.md`.
+
 | Source cluster | Use it for |
 | --- | --- |
 | `What Is To Be Done?` | Spontaneity, consciousness, organization, political leadership |

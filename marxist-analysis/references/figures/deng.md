@@ -6,6 +6,8 @@ Address development stage, productivity, reform, opening, institutional adjustme
 
 ## Source Anchors
 
+For author-only grounding and method granularity, load `references/source-index/deng.md`.
+
 | Source cluster | Use it for |
 | --- | --- |
 | Emancipating the mind and seeking truth from facts | Breaking doctrinal blockage through practice |

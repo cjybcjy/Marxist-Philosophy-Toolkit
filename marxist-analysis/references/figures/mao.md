@@ -6,6 +6,8 @@ Apply Marxism to Chinese revolutionary and construction conditions through contr
 
 ## Source Anchors
 
+For author-only grounding and method granularity, load `references/source-index/mao.md`.
+
 | Source cluster | Use it for |
 | --- | --- |
 | `Analysis of the Classes in Chinese Society` | Concrete class investigation and alliance judgment |

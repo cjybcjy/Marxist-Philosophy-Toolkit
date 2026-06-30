@@ -54,6 +54,20 @@ Do not show the full ledger unless the user asks how the answer is sourced. Use 
 | Current facts are needed | Use `source-policy.md`; do not replace current evidence with classic texts |
 | More citations would all come from the same text | Do not pad; one precise anchor plus boundary is better than a quote pile |
 
+## Method Granularity Gate
+
+Before treating a figure's idea as a durable method, check:
+
+| Test | Ask |
+| --- | --- |
+| Author-only | Is the source the figure's own work, speech, report, letter, or jointly authored text? |
+| Cross-domain reproduction | Does the method recur across more than one problem domain, or is it only one local phrase? |
+| Generativity | Can the method produce a new investigation, contradiction map, or practice test? |
+| Boundary | Is the historical task and stage named before applying it today? |
+| Non-duplication | Are we counting distinct source clusters rather than repeated passages from one text? |
+
+If a method fails these tests, downgrade it to a tentative source anchor or later interpretation.
+
 ## Minimum Diversity Rules
 
 - For a single concept answer, one primary source cluster is enough if the method and boundary are clear.

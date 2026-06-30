@@ -16,8 +16,10 @@ This is not a persona skill. Do not roleplay as Marx, Engels, Lenin, Mao, Deng, 
 Always preserve this distinction:
 
 ```text
+Frameworks organize concepts.
 Themes are the entry point.
 Figures are source modules.
+Templates standardize procedures.
 Arbitration resolves tensions.
 Practice tests the conclusion.
 ```
@@ -38,8 +40,9 @@ Classify the request:
 | Reality analysis | Mentions a company, industry, policy, organization, career, family, project, or social problem | Load `references/scenario-checkpoints.md`; gather facts first, load `references/constraint-map.md`, load `references/source-policy.md` when using current facts, then load themes |
 | Practice problem | User wants to act, decide, learn, stop avoiding, or run an experiment | Load `references/scenario-checkpoints.md`, `references/protocols/personal-practice.md`, `references/practice-cards.md`, `references/practice-metrics.md`, `references/risk-and-inversion.md`, plus relevant themes |
 | Conflict | Asks why one route differs from another, or whether a theory was betrayed | Load `references/scenario-checkpoints.md` and `references/arbitration.md` |
-| Source check | Asks "where does this come from" or asks for original texts | Load `references/source-policy.md` and `references/source-map.md` |
-| Source coverage | Says answers repeat the same texts, arguments, slogans, or examples; asks whether the skill has enough source material | Load `references/source-coverage.md`, `references/source-map.md`, and `references/source-policy.md` |
+| Source check | Asks "where does this come from" or asks for original texts | Load `references/source-policy.md`, `references/source-map.md`, and the relevant source-index file |
+| Source coverage | Says answers repeat the same texts, arguments, slogans, or examples; asks whether the skill has enough source material | Load `references/source-coverage.md`, `references/source-map.md`, `references/source-policy.md`, and the relevant source index |
+| Theory framework | Asks whether the skill needs textbooks, basic-principles frameworks, theory system, concept taxonomy, or standardized analysis templates | Load `references/theory-framework.md`, `references/method-templates.md`, `references/source-policy.md`, then affected themes |
 | Prior-art reuse | Asks to borrow from another skill, repo, framework, SkillOpt, Darwin, Nuwa, X Mentor, or says not to reinvent the wheel | Load `references/prior-art-scan.md`, `references/source-policy.md`, then `references/evolution-protocol.md` if editing this skill |
 | Skill evolution | Asks to improve, test, score, evolve, debug, or extend this skill | Load `references/evolution-protocol.md`, `references/prior-art-scan.md` when new mechanisms or external methods are involved, `references/evaluation-rubric.md`, `references/coverage-matrix.md`, and affected scenarios |
 
@@ -51,20 +54,24 @@ Use progressive disclosure:
 
 1. Start with one protocol or one theme.
 2. Add `references/scenario-checkpoints.md` before answering real-world, practice, conflict, concept, or source-coverage scenarios that need a pre-answer gate.
-3. Add figure modules only when they clarify the method or historical condition.
-4. Add `references/arbitration.md` only when sources or routes conflict.
-5. Add `references/source-map.md` when the user wants original-text grounding.
-6. Add `references/source-coverage.md` when the answer may be reusing the same source anchors, the user flags repeated arguments, or a figure module is stretched beyond its corpus.
-7. Add `references/prior-art-scan.md` before designing a new workflow, evaluator, automation loop, or module based on external skills or frameworks.
-8. Add `references/fallbacks.md` when facts are missing, the main contradiction is unclear, or the answer is drifting into slogans, roleplay, or overconfidence.
-9. Add `references/practice-cards.md` when the user needs a concrete action, experiment, investigation, or review loop.
-10. Add `references/constraint-map.md` before route choice when the problem is constrained by material conditions, ownership, organization, information flow, incentives, or ideology.
-11. Add `references/risk-and-inversion.md` before recommending actions with meaningful downside, irreversibility, or consequences for others.
-12. Add `references/concept-debugging.md` when a concept might become a label rather than an operational tool.
-13. Add `references/practice-metrics.md` whenever a practice test, experiment, or review loop is proposed.
-14. Add `references/evaluation-rubric.md` when scoring outputs, forward-testing the skill, or deciding whether a response passed.
-15. Add `references/evolution-protocol.md` before editing this skill based on a failure, recurring weakness, or new use case.
-16. Add `references/coverage-matrix.md` when deciding whether existing scenarios cover a failure mode or a new scenario is needed.
+3. Add `references/theory-framework.md` when the request needs concept taxonomy, basic-principles textbook structure, or universal-method vs historical-conclusion separation.
+4. Add `references/method-templates.md` when the answer needs a repeatable procedure such as contradiction analysis, practice verification, historical-materialist analysis, or development trend analysis.
+5. Add figure modules only when they clarify the method or historical condition.
+6. Add `references/arbitration.md` only when sources or routes conflict.
+7. Add `references/source-map.md` when the user wants original-text grounding.
+8. Add the relevant source-index file when the answer needs author-only source grounding, method granularity, or case calibration for a specific figure.
+9. Add `references/source-coverage.md` when the answer may be reusing the same source anchors, the user flags repeated arguments, or a figure module is stretched beyond its corpus.
+10. Add `references/cases/figure-case-calibration.md` when a historical case is used to calibrate a modern application.
+11. Add `references/prior-art-scan.md` before designing a new workflow, evaluator, automation loop, or module based on external skills or frameworks.
+12. Add `references/fallbacks.md` when facts are missing, the main contradiction is unclear, or the answer is drifting into slogans, roleplay, or overconfidence.
+13. Add `references/practice-cards.md` when the user needs a concrete action, experiment, investigation, or review loop.
+14. Add `references/constraint-map.md` before route choice when the problem is constrained by material conditions, ownership, organization, information flow, incentives, or ideology.
+15. Add `references/risk-and-inversion.md` before recommending actions with meaningful downside, irreversibility, or consequences for others.
+16. Add `references/concept-debugging.md` when a concept might become a label rather than an operational tool.
+17. Add `references/practice-metrics.md` whenever a practice test, experiment, or review loop is proposed.
+18. Add `references/evaluation-rubric.md` when scoring outputs, forward-testing the skill, or deciding whether a response passed.
+19. Add `references/evolution-protocol.md` before editing this skill based on a failure, recurring weakness, or new use case.
+20. Add `references/coverage-matrix.md` when deciding whether existing scenarios cover a failure mode or a new scenario is needed.
 
 Default MVP routing:
 
@@ -184,8 +191,11 @@ Before answering, check:
 | Roundtable answer: "Marx says..., Lenin says..., Mao says..." | Rewrite as one analysis; mention figure modules only as sources |
 | Slogan answer | Add reality conditions, contradictions, interests, and practice test |
 | Pure textbook answer to real problem | Ask/verify facts, then rerun the workflow |
+| Raw original-text answer with no system or procedure | Load `references/theory-framework.md` and `references/method-templates.md`; classify the concept and choose a repeatable template |
+| Textbook framework treated as proof | Load `references/source-policy.md`; mark it as framework-synthesis and ground authority in primary texts |
 | Treats all historical stages as the same | Load `references/arbitration.md` and state condition differences |
 | Quotes without method | Replace quote pile with concept, source, use, and boundary |
+| Uses secondary commentary as if it were an author's own work | Load `references/source-policy.md` and the relevant source index; downgrade commentary to later interpretation |
 | Starts answering before the scenario is clear | Load `references/scenario-checkpoints.md`; run the shared gate and chosen scenario gate |
 | Forces one main contradiction without evidence | Load `references/fallbacks.md`; list candidates and what evidence would decide |
 | Action answer stays vague | Load `references/practice-cards.md`; fill one card |
@@ -205,10 +215,13 @@ Core coordination:
 
 - `references/dispatcher.md`: route questions to themes, figures, and protocols.
 - `references/scenario-checkpoints.md`: run scenario-specific pre-answer gates before analysis.
+- `references/theory-framework.md`: use basic-principles textbook-style structure as a concept navigation layer, not as primary evidence.
+- `references/method-templates.md`: standardize contradiction, practice, historical-materialist, and development-trend analysis procedures.
 - `references/arbitration.md`: resolve tensions between routes and historical stages.
 - `references/source-policy.md`: decide what counts as reliable evidence.
 - `references/source-map.md`: map methods to source texts.
 - `references/source-coverage.md`: prevent repeated source anchors and expose source gaps before overextending a figure module.
+- `references/cases/figure-case-calibration.md`: use historical cases to calibrate modern applications without treating analogy as proof.
 - `references/prior-art-scan.md`: check mature external methods before inventing a new workflow or evaluator.
 - `references/fallbacks.md`: recover when facts, route, or output quality are failing.
 - `references/practice-cards.md`: turn analysis into reusable action, investigation, and review cards.
@@ -237,6 +250,13 @@ Figures:
 - `references/figures/lenin.md`
 - `references/figures/mao.md`
 - `references/figures/deng.md`
+
+Source indexes:
+
+- `references/source-index/marx-engels.md`
+- `references/source-index/lenin.md`
+- `references/source-index/mao.md`
+- `references/source-index/deng.md`
 
 Protocols:
 

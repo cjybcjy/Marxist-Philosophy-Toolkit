@@ -6,6 +6,8 @@ Analyze capitalist society, historical development, class relations, commodity p
 
 ## Source Anchors
 
+For author-only grounding and method granularity, load `references/source-index/marx-engels.md`.
+
 | Source cluster | Use it for |
 | --- | --- |
 | `The German Ideology` and related materialist-history writings | Material production, social relations, ideology |
